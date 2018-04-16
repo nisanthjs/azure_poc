@@ -5,9 +5,9 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>java-maven-junit-helloworld</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <groupId>com.azure.silos.</groupId>
+  <artifactId>Silos</artifactId>
+  <version>${version}</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -89,6 +89,35 @@
           </execution>
         </executions>
       </plugin>
+	  <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.6</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>azure_release</serverId>
+					<nexusUrl>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/</nexusUrl>
+					<skipStaging>false</skipStaging>
+					<stagingDescription>Silos</stagingDescription>
+				</configuration>
+			</plugin>
     </plugins>
   </build>
 
