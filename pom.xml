@@ -108,7 +108,7 @@
     <distributionManagement>
         <repository>
             <id>azure_release</id>
-            <url>http://mastervm.centralus.cloudapp.azure.com:8081/nexus</url>
+            <url>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/content/repositories/Silos_Repo</url>
         </repository>
     </distributionManagement>
 </project>
