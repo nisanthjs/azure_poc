@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.devops.azure</groupId>
     <artifactId>silos</artifactId>
-    <version>1.0.0.2</version>
+    <version>1.0.0.1</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -109,7 +109,7 @@
 				</executions>
 				<configuration>
 					<serverId>azure_release</serverId>
-					<nexusUrl>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/content/repositories/Silos_Repo</nexusUrl>
+					<nexusUrl>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/</nexusUrl>
 					<skipStaging>true</skipStaging>
 					<stagingDescription>Silos</stagingDescription>
 				</configuration>
@@ -129,7 +129,7 @@
     <distributionManagement>
         <repository>
             <id>azure_release</id>
-            <url>http://mastervm.centralus.cloudapp.azure.com:8081/nexus</url>
+            <url>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/content/repositories/Silos_Repo</url>
         </repository>
     </distributionManagement>
 </project>
