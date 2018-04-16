@@ -113,7 +113,7 @@
 				</executions>
 				<configuration>
 					<serverId>azure_release</serverId>
-					<nexusUrl>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/</nexusUrl>
+					<nexusUrl>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/content/repositories/Silos_Repo/</nexusUrl>
 					<skipStaging>true</skipStaging>
 					<stagingDescription>Silos</stagingDescription>
 				</configuration>
