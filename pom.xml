@@ -114,7 +114,7 @@
 				<configuration>
 					<serverId>azure_release</serverId>
 					<nexusUrl>http://mastervm.centralus.cloudapp.azure.com:8081/nexus/</nexusUrl>
-					<skipStaging>false</skipStaging>
+					<skipStaging>true</skipStaging>
 					<stagingDescription>Silos</stagingDescription>
 				</configuration>
 			</plugin>
